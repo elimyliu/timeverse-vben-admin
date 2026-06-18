@@ -1,0 +1,28 @@
+---
+name: timeverse-vben-admin
+version: 1.0.0
+author: trae-cn
+source: https://github.com/vbenjs/vue-vben-admin
+docs: https://doc.vben.pro/
+license: MIT
+default-ui: antd
+permission-mode: mixed
+keywords:
+  - vben
+  - admin
+  - 后台管理
+  - 中后台
+  - vue3
+  - vite
+  - typescript
+  - antd
+  - element-plus
+  - naive-ui
+  - tdesign
+  - RBAC
+  - CRUD
+  - dashboard
+  - 权限系统
+  - 动态菜单
+description: 基于 Vben Admin 5.x 的中后台管理系统开发技能
+---
