@@ -66,19 +66,25 @@ license: MIT
 ## 快速命令速查
 
 ```bash
-# 1. 拉取脚手架
-git clone https://github.com/vbenjs/vue-vben-admin.git
+# 1. 使用脚手架脚本（推荐——交互式选择 UI 框架，自动清理无用目录）
+# Windows:
+.\templates\init-vben.ps1
+# macOS/Linux:
+chmod +x templates/init-vben.sh && ./templates/init-vben.sh
+
+# 2. 或手动拉取脚手架
+git clone --depth 1 https://github.com/vbenjs/vue-vben-admin.git
 cd vue-vben-admin
 
-# 2. 安装依赖（强制使用 pnpm）
+# 3. 安装依赖（强制使用 pnpm）
 npm i -g corepack
 pnpm install
 
-# 3. 启动 Ant Design Vue 版本
+# 4. 启动 Ant Design Vue 版本
 pnpm run dev:antd
 # 访问 http://localhost:5555
 
-# 4. 其他命令
+# 5. 其他命令
 pnpm dev               # 交互式选择应用
 pnpm build             # 生产构建
 pnpm lint              # 代码检查
