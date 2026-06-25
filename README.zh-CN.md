@@ -1,4 +1,4 @@
-# timeverse-vben-admin
+﻿# timeverse-vben-admin
 
 > 基于 [Vben Admin 5.x](https://doc.vben.pro/) 快速搭建企业级后台管理系统的 AI 技能包
 
@@ -10,40 +10,64 @@
 
 将自然语言需求直接转化为可运行的 Vben Admin 5.x 项目。提供一键脚手架脚本、RBAC 权限模板、CRUD 页面生成器及完整的参考文档。
 
-## ✨ 功能特性
-
-  - 🏗 **一键脚手架** — PowerShell + Bash 脚本，克隆、安装、配置、启动，60 秒内完成
+## 功能特性
+  - ⚡ **一键脚手架** — PowerShell + Bash 脚本，克隆、安装、配置、启动，60 秒内完成
   - 🎨 **多 UI 支持** — 支持 Ant Design Vue（默认）、Element Plus、Naive UI、TDesign 四种框架
-  - 🔐 **三种权限模式** — 前端固定 / 后端动态 / 混合模式（默认）
-  - 📋 **CRUD 页面模板** — 完整的列表/表单/编辑/弹窗代码，开箱即用
-  - 🌐 **国际化** — 内置 zh-CN / en-US，轻松扩展多语言
-  - 🎭 **主题切换** — 深色模式、主题色、布局切换，通过 preferences 配置
-  - 📦 **Mock 数据** — 基于 Nitro 的本地 Mock 服务，快速原型开发
-  - � **数据可视化** — 内置 ECharts 集成方案，折线图、柱状图、饼图、仪表盘开箱即用
-  - � **6 份参考文档** — 技术栈、架构、权限、路由、通用功能、数据可视化
+  - 🔼 **三种权限模式** — 前端固定 / 后端动态 / 混合模式（默认）
+  - 📵 **CRUD 页面模板** — 完整的列表/表单/编辑/弹窗代码，开箱即用
+  - 🌪 **国际化** — 内置 zh-CN / en-US，轻松扩展多语言
+  - 🎁 **主题切换** — 深色模式、主题色、布局切换，通过 preferences 配置
+  - 📝 **Mock 数据** — 基于 Nitro 的本地 Mock 服务，快速原型开发
+  - 💎 **数据可视化** — 内置 ECharts 集成方案，折线图、柱状图、饼图、仪表盘开箱即用
+  - 💎 **6 份参考文档** — 技术栈、架构、权限、路由、通用功能、数据可视化
   - 🛠 **最佳实践** — 内置 10+ 条反模式清单，避免常见 Vben 开发陷阱
-  - 🏭 **19 种行业模板** — 电商、ERP、CRM、CMS、SaaS、O2O、HIS、MES 等
+  - 🏮 **19 种行业模板** — 电商、ERP、CRM、CMS、SaaS、O2O、HIS、MES 等
 
-## 🚀 快速开始
+## 快速开始
 
 ### 1. 安装技能
 
-**方式 A — 全局安装（推荐）**
+**方式 A — 从 GitHub 下载（推荐）**
+
+访问 [https://github.com/elimyliu/timeverse-vben-admin](https://github.com/elimyliu/timeverse-vben-admin)，点击 `Code` → `Download ZIP`，解压后将 `timeverse-vben-admin` 文件夹放入 AI 客户端的技能目录：
 
 ```powershell
-# 克隆仓库
-git clone https://github.com/<your-username>/timeverse-vben-admin.git
-# 复制到 Trae 全局技能目录
+# Trae 全局技能目录
 Copy-Item -Path .\timeverse-vben-admin -Destination "$env:USERPROFILE\.trae\skills\timeverse-vben-admin" -Recurse -Force
+
+# Cursor 技能目录
+Copy-Item -Path .\timeverse-vben-admin -Destination "$env:USERPROFILE\.cursor\skills\timeverse-vben-admin" -Recurse -Force
+
+# Windsurf 技能目录
+Copy-Item -Path .\timeverse-vben-admin -Destination "$env:USERPROFILE\.windsurf\skills\timeverse-vben-admin" -Recurse -Force
 ```
 
-**方式 B — 项目级安装**
+**方式 B — Git 克隆**
 
 ```powershell
-# 在 Trae 项目根目录
-mkdir -p .trae\skills
-git clone https://github.com/<your-username>/timeverse-vben-admin.git .trae\skills\timeverse-vben-admin
+git clone https://github.com/elimyliu/timeverse-vben-admin.git
 ```
+
+克隆后同方式 A，复制到对应客户端的技能目录。
+
+**方式 C — 项目级安装（Trae）**
+
+```powershell
+mkdir -p .trae\skills
+git clone https://github.com/elimyliu/timeverse-vben-admin.git .trae\skills\timeverse-vben-admin
+```
+
+### 配合其他 AI 客户端
+
+本技能核心是 `SKILL.md` 的指令集。在不同客户端中使用：
+
+| 客户端 | 使用方式 |
+|---|---|
+| **Trae** | 复制到 `~/.trae/skills/` 或项目 `.trae/skills/` |
+| **Cursor** | 将 `SKILL.md` 内容粘贴到 Rules → Custom Instructions |
+| **Windsurf** | 复制到 `~/.windsurf/skills/` |
+| **Claude Code** | `claude -p "请先加载 SKILL.md：\$(cat SKILL.md)"` |
+| **GitHub Copilot** | 将 `SKILL.md` 内容添加到 `.github/copilot-instructions.md` |
 
 ### 2. 使用技能
 
@@ -58,7 +82,7 @@ git clone https://github.com/<your-username>/timeverse-vben-admin.git .trae\skil
 
 AI 将自动激活技能并引导你完成实现。
 
-## 🛠 一键脚手架
+## 一键脚手架
 
 还没有项目？使用配套脚手架脚本快速创建：
 
@@ -83,33 +107,36 @@ chmod +x templates/init-vben.sh
 5. 配置权限模式（写入 `preferences.ts`）
 6. 启动开发服务器（http://localhost:5555）
 
-## 📂 项目结构
+## 项目结构
 
 ```
 timeverse-vben-admin/
-├── SKILL.md                          ← 技能主定义文件
-├── skill.yaml                        ← 技能元数据
-├── README.md                         ← 英文说明
-├── README.zh-CN.md                   ← 中文说明（当前文件）
-├── LICENSE                           ← MIT 许可证
-├── CHANGELOG.md                      ← 版本发布记录
-├── CONTRIBUTING.md                   ← 贡献指南
-├── .gitignore                        ← 排除规则
-├── reference/                        ← 深度参考文档
-│   ├── tech-stack.md                 ← 版本、命令、依赖
-│   ├── architecture.md               ← 目录结构、编码约定
-│   ├── permissions.md                ← RBAC：3 种模式 + 4 种按钮级用法
-│   ├── routing.md                    ← 路由、菜单、meta 配置
-│   ├── common-features.md            ← 登录、主题、国际化、HTTP、Mock
-│   └── industry-templates.md         ← 19 种行业模板的预设菜单和权限
-└── templates/                        ← 可直接复用的模板
-    ├── crud-page.md                  ← 完整的 CRUD 用户管理页面
-    ├── init-vben.ps1                 ← 脚手架脚本（Windows PowerShell）
-    ├── init-vben.sh                  ← 脚手架脚本（macOS/Linux Bash）
-    └── scaffolding-script.md         ← 脚本使用说明与参考
+├── SKILL.md                           → 技能主定义文件
+├── skill.yaml                         → 技能元数据
+├── README.md                          → 英文说明
+├── README.zh-CN.md                    → 中文说明（当前文件）
+├── LICENSE                            → MIT 许可证
+├── CHANGELOG.md                       → 版本发布记录
+├── CONTRIBUTING.md                    → 贡献指南
+├── .gitignore                         → 排除规则
+├── reference/                         → 深度参考文档
+│   ├── tech-stack.md                  → 版本、命令、依赖
+│   ├── architecture.md                → 目录结构、编码约定
+│   ├── permissions.md                 → RBAC：3 种模式 + 4 种按钮级用法
+│   ├── routing.md                     → 路由、菜单、meta 配置
+│   ├── common-features.md             → 登录、主题、国际化、HTTP、Mock
+├── data-visualization.md              → ECharts 集成、Dashboard 布局
+│   └── industry-templates.md          → 19 种行业模板的预设菜单和权限
+├── templates/                         → 可直接复用的模板
+│   ├── crud-page.md                   → 完整的 CRUD 用户管理页面
+│   ├── crud-advanced.md               → 树形表格、批量操作、导入导出、拖拽排序
+│   ├── dashboard.md                   → 工作台 + 分析页模板
+│   ├── init-vben.ps1                  → 脚手架脚本（Windows PowerShell）
+│   ├── init-vben.sh                   → 脚手架脚本（macOS/Linux Bash）
+│   └── scaffolding-script.md          → 脚本使用说明与参考
 ```
 
-## 🎯 触发关键词
+## 触发关键词
 
 在对话框中提到以下关键词时技能自动激活：
 
@@ -137,7 +164,7 @@ timeverse-vben-admin/
 | OA 系统、审批管理、考勤管理、会议管理、文档管理 |
 | API 开放平台、API 管理、流量控制、应用管理、调用统计 |
 
-## 🏗 技术栈（Vben Admin 5.x）
+## 技术栈（Vben Admin 5.x）
 
 | 层级 | 技术选型 |
 |---|---|
@@ -153,7 +180,7 @@ timeverse-vben-admin/
 | 测试 | Vitest |
 | 代码检查 | Oxfmt / Oxlint / ESLint / Stylelint |
 
-## 📖 参考文档
+## 参考文档
 
 - [Vben Admin 5.x 官方文档](https://doc.vben.pro/)
 - [技术栈详情](reference/tech-stack.md) — 版本要求、常用命令、IDE 配置
@@ -163,13 +190,13 @@ timeverse-vben-admin/
 - [通用功能](reference/common-features.md) — 登录、主题、国际化、HTTP、Mock
 - [数据可视化](reference/data-visualization.md) — ECharts 集成、图表组件、Dashboard 布局
 
-## 🤝 贡献指南
+## 贡献指南
 
 欢迎贡献！请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ```bash
 # Fork 并克隆
-git clone https://github.com/<your-username>/timeverse-vben-admin.git
+git clone https://github.com/elimyliu/timeverse-vben-admin.git
 cd timeverse-vben-admin
 
 # 在功能分支上修改
@@ -179,19 +206,19 @@ git push origin feat/better-templates
 # 提交 Pull Request
 ```
 
-## 📜 许可证
+## 许可证
 
-[MIT](LICENSE) © timeverse
+[MIT](LICENSE) &copy; timeverse
 
-## 🙏 致谢
+## 致谢
 
 - [Vben Admin](https://github.com/vbenjs/vue-vben-admin) — 底层框架
-- 所有为本技能贡献的开发者
+- 所有为本案技能贡献的开发者
 
-## ⚠️ 免责声明
+## 免责声明
 
 这是一个社区技能包，与 Vben Admin 官方团队无关联。权威信息请参考 [Vben 官方文档](https://doc.vben.pro/)。
 
 ---
 
-<p align="center">为 Vben Admin 社区打造 ❤️</p>
+<p align="center">用 Vben Admin 社区打造 💜</p>

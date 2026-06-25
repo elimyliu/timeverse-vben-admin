@@ -27,7 +27,7 @@ Open an issue with:
 - Clear, descriptive title
 - Steps to reproduce
 - Expected vs actual behavior
-- Vben Admin version (`package.json` â†’ `vben` package version)
+- Vben Admin version (`package.json` â†?`vben` package version)
 - Node / pnpm version
 - Screenshots / error logs
 
@@ -53,12 +53,12 @@ Doc improvements are always welcome:
 
 We love new templates! Suggested slots:
 
-- `templates/dashboard.md` â€” analytics / workspace dashboards
-- `templates/role-management.md` â€” role/permission CRUD
-- `templates/department-tree.md` â€” org tree
-- `templates/file-upload.md` â€” upload to OSS / S3
-- `templates/i18n-keys.md` â€” locale workflow
-- `templates/api-error-handler.md` â€” global error handler
+- `templates/dashboard.md` â€?analytics / workspace dashboards
+- `templates/role-management.md` â€?role/permission CRUD
+- `templates/department-tree.md` â€?org tree
+- `templates/file-upload.md` â€?upload to OSS / S3
+- `templates/i18n-keys.md` â€?locale workflow
+- `templates/api-error-handler.md` â€?global error handler
 
 Each template should be a **complete, copy-paste ready** example with:
 
@@ -75,7 +75,7 @@ Each template should be a **complete, copy-paste ready** example with:
 
 - Use ATX headings (`#` not `===` underlines)
 - Use fenced code blocks with language hints (```ts, ```vue, ```bash)
-- Use emoji sparingly: âœ… âŒ ğŸ’¡ âš ï¸
+- Use emoji sparingly: âœ?â?ğŸ’¡ âš ï¸
 - Wrap code in backticks for inline references
 - Link to Vben docs when referencing official APIs
 
@@ -90,7 +90,7 @@ Each template should be a **complete, copy-paste ready** example with:
 
 ### YAML / Front-matter
 
-- Keep `name` in kebab-case, â‰¤ 32 chars
+- Keep `name` in kebab-case, â‰?32 chars
 - Pin `version` to semver
 - Always include `description` and `author`
 
@@ -108,13 +108,13 @@ We follow [Conventional Commits](https://www.conventionalcommits.org/):
 
 Types:
 
-- `feat` â€” new feature
-- `fix` â€” bug fix
-- `docs` â€” docs only
-- `style` â€” formatting
-- `refactor` â€” code change that neither fixes a bug nor adds a feature
-- `test` â€” adding tests
-- `chore` â€” build / tooling
+- `feat` â€?new feature
+- `fix` â€?bug fix
+- `docs` â€?docs only
+- `style` â€?formatting
+- `refactor` â€?code change that neither fixes a bug nor adds a feature
+- `test` â€?adding tests
+- `chore` â€?build / tooling
 
 Examples:
 
@@ -136,10 +136,10 @@ docs(readme): clarify install steps
    - Clear description of the change
    - Link to any related issue
    - Screenshots (if visual)
-8. **Wait for review** â€” maintainers will review within 3-5 days
-9. **Address feedback** â€” push additional commits to the same branch
+8. **Wait for review** â€?maintainers will review within 3-5 days
+9. **Address feedback** â€?push additional commits to the same branch
 
-## âœ… Checklist Before Submitting
+## âœ?Checklist Before Submitting
 
 - [ ] All code examples compile
 - [ ] Markdown renders correctly (no broken links)
@@ -149,6 +149,6 @@ docs(readme): clarify install steps
 
 ## ğŸ“ Questions?
 
-Open a [Discussion](https://github.com/<your-username>/timeverse-vben-admin/discussions) or comment on a related issue.
+Open a [Discussion](https://github.com/elimyliu/timeverse-vben-admin/discussions) or comment on a related issue.
 
 Thanks again for contributing! ğŸ’œ
