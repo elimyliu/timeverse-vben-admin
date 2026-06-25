@@ -1,6 +1,6 @@
 # timeverse-vben-admin
 
-A Trae IDE skill for scaffolding enterprise admin systems with [Vben Admin 5.x](https://doc.vben.pro/).
+A skill for scaffolding enterprise admin systems with [Vben Admin 5.x](https://doc.vben.pro/).
 
 - 📖 [Full README](README.md)
 - 🚀 [Quick Start](README.md#-quick-start)

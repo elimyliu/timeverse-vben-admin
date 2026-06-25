@@ -166,7 +166,7 @@ setLocale('en-US');
 
 ## 四、切换 UI 库
 
-Vben 提供 4 套完整 UI 库应用：
+Vben 提供 5 套完整 UI 库应用：
 
 | App | UI 库 | 启动命令 |
 |---|---|---|

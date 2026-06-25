@@ -1,7 +1,7 @@
 ---
 name: timeverse-vben-admin
-version: 1.0.0
-author: trae-cn
+version: 2.0.0
+author: timeverse
 source: https://github.com/vbenjs/vue-vben-admin
 docs: https://doc.vben.pro/
 license: MIT

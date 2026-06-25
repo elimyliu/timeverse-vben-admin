@@ -1,6 +1,6 @@
 # timeverse-vben-admin
 
-> A Trae IDE skill for scaffolding enterprise-grade admin systems with [Vben Admin 5.x](https://doc.vben.pro/)
+> A skill for scaffolding enterprise-grade admin systems with [Vben Admin 5.x](https://doc.vben.pro/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Vben Admin](https://img.shields.io/badge/Vben%20Admin-5.x-1890ff)](https://github.com/vbenjs/vue-vben-admin)
@@ -9,7 +9,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6)](https://www.typescriptlang.org)
 [![pnpm](https://img.shields.io/badge/pnpm-9.x-F69220)](https://pnpm.io)
 
-A reusable Trae IDE skill that turns natural-language requirements into production-ready Vben Admin 5.x projects. Comes with one-click scaffolding scripts, RBAC templates, CRUD page generators, and complete reference docs.
+A reusable skill that turns natural-language requirements into production-ready Vben Admin 5.x projects. Comes with one-click scaffolding scripts, RBAC templates, CRUD page generators, and complete reference docs.
 
 ## ✨ Features
 
@@ -25,7 +25,7 @@ A reusable Trae IDE skill that turns natural-language requirements into producti
 
 ## 🚀 Quick Start
 
-### 1. Install the Skill in Trae IDE
+### 1. Install the Skill
 
 **Option A — Manual install (global)**
 
@@ -46,7 +46,7 @@ git clone https://github.com/<your-username>/timeverse-vben-admin.git .trae\skil
 
 ### 2. Use the Skill
 
-Open Trae IDE and chat naturally:
+Open the IDE and chat naturally:
 
 ```
 帮我用 Vben 搭建一个订单管理后台
@@ -156,7 +156,7 @@ git push origin feat/better-templates
 ## 🙏 Credits
 
 - [Vben Admin](https://github.com/vbenjs/vue-vben-admin) — the underlying framework
-- [Trae IDE](https://www.trae.ai/) — the AI development environment
+
 - All contributors who help keep this skill accurate and up-to-date
 
 ## ⚠️ Disclaimer

@@ -131,7 +131,7 @@ const [userInfo, accessCodes] = await Promise.all([
   getAccessCodes(),
 ]);
 authStore.setUserInfo(userInfo);
-accessStore.setAccessCodes(accessCodes); // ['AC_100100', 'AC_100010', ...]
+accessStore.setAccessCodes(accessCodes); // ['system:user:list', 'system:user:create', ...]
 ```
 
 ### 4 种用法
@@ -144,7 +144,7 @@ import { AccessControl } from '@vben/access';
 </script>
 
 <template>
-  <AccessControl :codes="['AC_100100']" type="code">
+  <AccessControl :codes="['system:user:list']" type="code">
     <Button>超级管理员可见</Button>
   </AccessControl>
 </template>
@@ -159,7 +159,7 @@ const { hasAccessByCodes } = useAccess();
 </script>
 
 <template>
-  <Button v-if="hasAccessByCodes(['AC_100100'])">超级管理员可见</Button>
+  <Button v-if="hasAccessByCodes(['system:user:list'])">超级管理员可见</Button>
 </template>
 ```
 
@@ -167,8 +167,8 @@ const { hasAccessByCodes } = useAccess();
 
 ```vue
 <template>
-  <Button v-access:code="'AC_100100'">超级管理员可见</Button>
-  <Button v-access:code="['AC_100100', 'AC_100010']">超级+管理员可见</Button>
+  <Button v-access:code="'system:user:list'">超级管理员可见</Button>
+  <Button v-access:code="['system:user:list', 'system:user:create']">超级+管理员可见</Button>
 </template>
 ```
 
@@ -187,13 +187,13 @@ const { hasAccessByCodes } = useAccess();
 
 | 模块 | 前缀 | 示例 |
 |---|---|---|
-| 用户管理 | `AC_100` | `AC_100100` 查询、`AC_100110` 新增、`AC_100120` 编辑、`AC_100130` 删除 |
-| 角色管理 | `AC_200` | `AC_200100` 查询、`AC_200110` 新增... |
-| 菜单管理 | `AC_300` | ... |
-| 订单管理 | `AC_400` | ... |
-| 系统设置 | `AC_900` | ... |
+| 用户管理 | `system:user` | `system:user:list` 查询、`system:user:create` 新增、`system:user:edit` 编辑、`system:user:delete` 删除、`system:user:export` 导出 |
+| 角色管理 | `system:role` | `system:role:list` 查询、`system:role:create` 新增... |
+| 菜单管理 | `system:menu` | `system:menu:list` 查询、`system:menu:create` 新增... |
+| 订单管理 | `order` | `order:list` 查询、`order:create` 新增... |
+| 系统设置 | `setting` | `setting:list` 查询、`setting:edit` 编辑... |
 
-规则：`<模块前缀><2位动作>`  →  100=查询、110=新增、120=编辑、130=删除、140=导出
+规则：`<模块>:<子模块>:<动作>`  →  list=查询、create=新增、edit=编辑、delete=删除、export=导出
 
 ---
 

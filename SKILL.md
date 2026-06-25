@@ -2,7 +2,7 @@
 name: timeverse-vben-admin
 description: "Use this skill when the user wants to build a Vue 3 / TypeScript / Vite admin management system (后台管理系统) using Vben Admin 5.x as the foundation. Triggers on phrases like '搭建后台', '管理系统', '中后台', 'admin', 'vben', '权限系统', 'CRUD 页面', 'Dashboard', 'RBAC'."
 version: 1.0.0
-author: trae-cn
+author: timeverse
 ui-default: antd
 permission-default: mixed
 license: MIT
@@ -16,7 +16,7 @@ license: MIT
 
 当用户提出以下需求时**必须**使用本技能：
 
-- "帮我搭建一个后台管理系统" / "做一个 admin" / "中后台原型"
+- "帮我搭建一个后台管理系统" / "做一个 admin" / "中后台原型" — **必须先询问系统类型**（电商/O2O/餐饮/PMS/ERP/CRM/CMS/支付/金融/FMS/HIS/教育/物业/TMS/MES/SaaS/OA/API开放平台/通用/自定义）
 - "基于 Vben 做一个 XXX 系统"
 - "用 Vue3 写一个后台" + 涉及表格/表单/权限/菜单/Dashboard
 - 已有 Vben 项目，需要新增模块、CRUD 页面、权限改造、主题、国际化
@@ -41,6 +41,9 @@ license: MIT
 每接到一个 Vben 相关任务，按以下顺序执行：
 
 ```
+0. 询问/确认系统类型                   → 阅读 [reference/industry-templates.md]
+   如果是"搭建后台管理系统"，先问：电商/O2O/餐饮/PMS/ERP/CRM/CMS/支付/金融/FMS/HIS/教育/物业/TMS/MES/SaaS/OA/API开放平台/通用/自定义
+   选定后使用对应模板初始化菜单、路由、权限、页面结构
 1. 阅读 [reference/tech-stack.md]         → 确认技术栈与命令
 2. 阅读 [reference/architecture.md]       → 确认目录结构
 3. 阅读 [reference/permissions.md]        → 确认权限模式
@@ -100,10 +103,11 @@ pnpm test              # 单元测试（vitest）
 
 | 任务 | 关键文件 |
 |---|---|
+| 新建项目选系统类型 | 见 [reference/industry-templates.md](reference/industry-templates.md)，含 6 种行业预设菜单/权限/角色 |
 | 新增一个 CRUD 页面 | `src/router/routes/modules/<业务>.ts` + `src/views/<业务>/<page>.vue`，见 [templates/crud-page.md](templates/crud-page.md) |
 | 接入后端 API | 改 `src/api/<业务>/index.ts` + `src/service/request/index.ts` |
 | 修改登录逻辑 | `src/views/_core/authentication/login.vue` + `src/api/core/auth.ts` + `src/store/auth.ts` |
-| 新增按钮权限 | `<AccessControl :codes="['AC_xxx']" type="code">` |
+| 新增按钮权限 | `<AccessControl :codes="['system:user:edit']" type="code">` |
 | 切换 UI 库 | 见 [reference/common-features.md](reference/common-features.md) 切换章节 |
 | 国际化文案 | `src/locales/langs/zh-CN.ts` 添加 key + 模板用 `$t('key')` |
 | 主题色修改 | `apps/web-antd/src/preferences.ts` |

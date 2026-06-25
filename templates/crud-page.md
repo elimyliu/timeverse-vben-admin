@@ -16,7 +16,7 @@ const routes: RouteRecordRaw[] = [
     meta: {
       title: $t('page.system.user.title'),
       icon: 'mdi:account-cog',
-      authority: ['admin'],
+      authority: ['super_admin'],
     },
   },
 ];
@@ -141,7 +141,11 @@ import {
   SystemUserApi,
 } from '#/api/system/user';
 import { $t } from '#/locales';
-import { ElMessage, ElMessageBox } from 'element-plus'; // 或从 ant-design-vue 导入
+import { message, Modal } from 'ant-design-vue';
+// 如需切换其他 UI 库，替换为：
+// Element Plus: import { ElMessage, ElMessageBox } from 'element-plus';
+// Naive UI:     import { useMessage, useDialog } from 'naive-ui';
+// TDesign:      import { MessagePlugin, DialogPlugin } from 'tdesign-vue-next';
 import Editor from './editor.vue';
 
 // 表格配置
@@ -196,7 +200,7 @@ const [Modal, modalApi] = useVbenModal({
     if (!valid) return false;
     try {
       await saveUserApi(modalApi.getData().values);
-      ElMessage.success($t('page.system.user.message.saveSuccess'));
+      message.success($t('page.system.user.message.saveSuccess'));
       await gridApi.reload();
       return true;
     } catch {
@@ -223,13 +227,13 @@ function onEdit(row: SystemUserApi.UserEntity) {
 
 async function onDelete(row: SystemUserApi.UserEntity) {
   try {
-    await ElMessageBox.confirm(
+    await Modal.confirm(
       $t('page.system.user.action.deleteConfirm'),
       'Warning',
       { type: 'warning' },
     );
     await deleteUserApi(row.id);
-    ElMessage.success($t('page.system.user.message.deleteSuccess'));
+    message.success($t('page.system.user.message.deleteSuccess'));
     await gridApi.reload();
   } catch {}
 }
@@ -246,10 +250,10 @@ async function onDelete(row: SystemUserApi.UserEntity) {
 
       <template #action="{ row }">
         <Space>
-          <Button link type="primary" v-access:code="['AC_100120']" @click="onEdit(row)">
+          <Button link type="primary" v-access:code="['system:user:edit']" @click="onEdit(row)">
             {{ $t('page.system.user.action.edit') }}
           </Button>
-          <Button link type="danger" v-access:code="['AC_100130']" @click="onDelete(row)">
+          <Button link type="danger" v-access:code="['system:user:delete']" @click="onDelete(row)">
             {{ $t('page.system.user.action.delete') }}
           </Button>
         </Space>
