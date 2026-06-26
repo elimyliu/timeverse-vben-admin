@@ -33,6 +33,9 @@
 
 ## Monorepo 目录结构
 
+> **注意：** 以下 `apps/` 目录包含 5 套 UI 框架应用。克隆项目时必须先询问用户使用哪一个，禁止全部下载。
+> 脚手架脚本（`templates/init-vben.ps1` / `templates/init-vben.sh`）会自动询问并只保留选中的 UI 应用。
+
 ```
 vue-vben-admin/
 ├── apps/

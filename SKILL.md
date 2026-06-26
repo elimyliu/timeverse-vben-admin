@@ -44,13 +44,21 @@ license: MIT
 0. 询问/确认系统类型                   → 阅读 [reference/industry-templates.md]
    如果是"搭建后台管理系统"，先问：电商/O2O/餐饮/PMS/ERP/CRM/CMS/支付/金融/FMS/HIS/教育/物业/TMS/MES/SaaS/OA/API开放平台/通用/自定义
    选定后使用对应模板初始化菜单、路由、权限、页面结构
-1. 阅读 [reference/tech-stack.md]         → 确认技术栈与命令
-2. 阅读 [reference/architecture.md]       → 确认目录结构
-3. 阅读 [reference/permissions.md]        → 确认权限模式
-4. 阅读 [reference/routing.md]            → 确认路由/菜单规范
-5. 阅读 [reference/common-features.md]    → 登录/主题/国际化方案
-6. 按需使用 [templates/crud-page.md]     → CRUD 页面模板
-7. 按需使用 [templates/scaffolding-script.md] → 脚手架命令
+1. 询问/确认 UI 框架                   → 参考 [reference/tech-stack.md] 的 UI 应用列表
+   必须问用户用哪个，禁止全部下载。选项：
+     - antd（Ant Design Vue，默认）
+     - antdv-next（Ant Design Vue 5.x 实验版）
+     - ele（Element Plus）
+     - naive（Naive UI）
+     - tdesign（TDesign）
+   确认后在脚手架命令中通过 -UI 参数指定
+2. 阅读 [reference/tech-stack.md]         → 确认技术栈与命令
+3. 阅读 [reference/architecture.md]       → 确认目录结构
+4. 阅读 [reference/permissions.md]        → 确认权限模式
+5. 阅读 [reference/routing.md]            → 确认路由/菜单规范
+6. 阅读 [reference/common-features.md]    → 登录/主题/国际化方案
+7. 按需使用 [templates/crud-page.md]     → CRUD 页面模板
+8. 按需使用 [templates/scaffolding-script.md] → 脚手架命令
 ```
 
 ## 核心约束（绝对禁止违反）
@@ -65,6 +73,7 @@ license: MIT
 8. **Mock 数据**：优先使用 Nitro 内置 Mock，目录 `apps/web-antd/mock/`
 9. **代码规范**：提交前必须跑 `pnpm lint` + `pnpm typecheck`
 10. **不要在 router 文件里直接写组件导入**，用 `() => import('#/views/...')` 懒加载
+11. **克隆项目时必须询问用户选哪个 UI 框架**，禁止全部下载 `apps/web-antd`、`web-antdv-next`、`web-ele`、`web-naive`、`web-tdesign` 等应用目录
 
 ## 快速命令速查
 
